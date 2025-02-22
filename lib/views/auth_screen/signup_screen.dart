@@ -5,9 +5,15 @@ import 'package:emart_app/widget_common/custom_textfield.dart';
 import 'package:emart_app/widget_common/our_button.dart';
 import 'package:get/route_manager.dart';
 
-class SignUp extends StatelessWidget {
+class SignUp extends StatefulWidget {
   const SignUp({super.key});
 
+  @override
+  State<SignUp> createState() => _SignUpState();
+}
+
+class _SignUpState extends State<SignUp> {
+  bool? isCheck = false;
   @override
   Widget build(BuildContext context) {
     return bgWidget(Scaffold(
@@ -33,70 +39,73 @@ class SignUp extends StatelessWidget {
                 ),
                 //5.heightBox,
                 //ourButton().box.width(context.screenWidth - 50).make(),
-                
+
                 5.heightBox,
                 Row(
                   children: [
-                    Checkbox(checkColor: redColor, value: false, onChanged: (newValue){}),
+                    Checkbox(
+                        activeColor: Colors.white,
+                        checkColor: redColor,
+                        value: isCheck,
+                        onChanged: (newValue) {
+                          setState(() {
+                            isCheck = newValue;
+                          });
+                        }),
                     10.widthBox,
                     Expanded(
-                      child: RichText(text: const TextSpan(
-                        children: [
-                          TextSpan(
-                            text: "I agree to the ",style: TextStyle(
-                              fontFamily: bold,
+                      child: RichText(
+                          text: const TextSpan(children: [
+                        TextSpan(
+                            text: "I agree to the ",
+                            style: TextStyle(
+                              fontFamily: regular,
                               color: fontGrey,
-                            )
-                          ),
-                          TextSpan(
+                            )),
+                        TextSpan(
                             text: termsNconditions,
                             style: TextStyle(
-                              fontFamily: bold,
+                              fontFamily: regular,
                               color: redColor,
-                            )
-                          ),
-                          TextSpan(
-                            text: " & ",style: TextStyle(
-                              fontFamily: bold,
+                            )),
+                        TextSpan(
+                            text: " & ",
+                            style: TextStyle(
+                              fontFamily: regular,
                               color: fontGrey,
-                            )
-                          ),
-                          TextSpan(
-                            text: privacyPolicy,style: TextStyle(
-                              fontFamily: bold,
+                            )),
+                        TextSpan(
+                            text: privacyPolicy,
+                            style: TextStyle(
+                              fontFamily: regular,
                               color: fontGrey,
-                            )
-                          )
-                        ]
-                      )),
+                            ))
+                      ])),
                     )
                   ],
                 ),
                 ourButton(
                   onpress: () {},
-                  color: redColor,
+                  color: isCheck == true? redColor : lightGrey,
                   textColor: whiteColor,
                   title: signUp,
                 ).box.width(context.screenWidth - 50).make(),
                 10.heightBox,
-                RichText(text: const TextSpan(
-                  children: [
-                    TextSpan(
+                RichText(
+                    text: const TextSpan(children: [
+                  TextSpan(
                       text: alreadyHaveAnAcc,
                       style: TextStyle(
                         fontFamily: bold,
                         color: fontGrey,
-                      )
-                    ),
-                    TextSpan(
+                      )),
+                  TextSpan(
                       text: login,
                       style: TextStyle(
                         fontFamily: bold,
                         color: redColor,
-                      )
-                    )
-                  ]
-                )).onTap(() {
+                      ))
+                ])).onTap(() {
                   Get.back();
                 }),
 
