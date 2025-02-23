@@ -2,8 +2,8 @@ import 'package:emart_app/consts/consts.dart';
 import 'package:emart_app/controllers/homecontroller.dart';
 import 'package:get/get.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class Home extends StatelessWidget {
+  const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
