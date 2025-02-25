@@ -1,5 +1,4 @@
 import 'package:emart_app/views/splash_screen/splash_screen.dart';
-import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 
 import 'consts/consts.dart';
