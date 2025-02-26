@@ -1,5 +1,6 @@
 import 'package:emart_app/consts/consts.dart';
 import 'package:emart_app/consts/list.dart';
+import 'package:emart_app/widget_common/home_button.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -39,7 +40,19 @@ class HomeScreen extends StatelessWidget {
                     sliderList[index],
                     fit: BoxFit.fill,
                   ).box.rounded.clip(Clip.antiAlias).margin(const EdgeInsets.symmetric(horizontal: 8)).make();
-                })
+                }
+            ),
+            //deal button
+            10.heightBox,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                //List.generate(2,((index) => homeButton(context.screenHeight*0.15, context.screenWidth/2.5, icTodaysDeal, todaydeal, (){}))),
+                homeButton(context.screenHeight*0.15, context.screenWidth/2.5, icTodaysDeal, todaydeal, (){}),
+                homeButton(context.screenHeight*0.15, context.screenWidth/2.5, icFlashDeal, flashSale, (){}),
+              ],
+            ),
+            //
           ],
         ),
       ),
