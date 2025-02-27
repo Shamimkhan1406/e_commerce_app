@@ -21,6 +21,7 @@ class HomeScreen extends StatelessWidget {
               height: 60,
               child: TextFormField(
                 decoration: const InputDecoration(
+                    border: InputBorder.none,
                     suffixIcon: Icon(Icons.search),
                     filled: true,
                     fillColor: Colors.white,
@@ -28,57 +29,119 @@ class HomeScreen extends StatelessWidget {
                     hintStyle: TextStyle(color: textfieldGrey)),
               ),
             ),
-            //swiper brands
-            VxSwiper.builder(
-              aspectRatio: 16/9,
-              autoPlay: true,
-              height: 160,
-              enlargeCenterPage: true,
-                itemCount: sliderList.length,
-                itemBuilder: (context, index) {
-                  return Image.asset(
-                    sliderList[index],
-                    fit: BoxFit.fill,
-                  ).box.rounded.clip(Clip.antiAlias).margin(const EdgeInsets.symmetric(horizontal: 8)).make();
-                }
-            ),
-            //deal button
-            10.heightBox,
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                //List.generate(2,((index) => homeButton(context.screenHeight*0.15, context.screenWidth/2.5, icTodaysDeal, todaydeal, (){}))),
-                homeButton(context.screenHeight*0.15, context.screenWidth/2.5, icTodaysDeal, todaydeal, (){}),
-                homeButton(context.screenHeight*0.15, context.screenWidth/2.5, icFlashDeal, flashSale, (){}),
-              ],
-            ),
-            //seconde swiper
-            10.heightBox,
-            VxSwiper.builder(
-              aspectRatio: 16/9,
-              autoPlay: true,
-              height: 160,
-              enlargeCenterPage: true,
-                itemCount: secondSliderList.length,
-                itemBuilder: (context, index) {
-                  return Image.asset(
-                    secondSliderList[index],
-                    fit: BoxFit.fill,
-                  ).box.rounded.clip(Clip.antiAlias).margin(const EdgeInsets.symmetric(horizontal: 8)).make();
-                }
-            ),
-            10.heightBox,
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                homeButton(context.screenHeight*0.12, context.screenWidth/3.5, icTopCategories, topCategory, (){}),
-                homeButton(context.screenHeight*0.12, context.screenWidth/3.5, icBrands, brand, (){}),
-                homeButton(context.screenHeight*0.12, context.screenWidth/3.5, icTopSeller, topSaller, (){}),
-              ],
-            )
+            Expanded(
+              child: SingleChildScrollView(
+                physics: const BouncingScrollPhysics(),
+                child: Column(
+                  children: [
+                    //swiper brands
+                    VxSwiper.builder(
+                        aspectRatio: 16 / 9,
+                        autoPlay: true,
+                        height: 160,
+                        enlargeCenterPage: true,
+                        itemCount: sliderList.length,
+                        itemBuilder: (context, index) {
+                          return Image.asset(
+                            sliderList[index],
+                            fit: BoxFit.fill,
+                          )
+                              .box
+                              .rounded
+                              .clip(Clip.antiAlias)
+                              .margin(const EdgeInsets.symmetric(horizontal: 8))
+                              .make();
+                        }),
+                    //deal button
+                    10.heightBox,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        //List.generate(2,((index) => homeButton(context.screenHeight*0.15, context.screenWidth/2.5, icTodaysDeal, todaydeal, (){}))),
+                        homeButton(
+                            context.screenHeight * 0.15,
+                            context.screenWidth / 2.5,
+                            icTodaysDeal,
+                            todaydeal,
+                            () {}),
+                        homeButton(
+                            context.screenHeight * 0.15,
+                            context.screenWidth / 2.5,
+                            icFlashDeal,
+                            flashSale,
+                            () {}),
+                      ],
+                    ),
+                    //seconde swiper
+                    10.heightBox,
+                    VxSwiper.builder(
+                        aspectRatio: 16 / 9,
+                        autoPlay: true,
+                        height: 160,
+                        enlargeCenterPage: true,
+                        itemCount: secondSliderList.length,
+                        itemBuilder: (context, index) {
+                          return Image.asset(
+                            secondSliderList[index],
+                            fit: BoxFit.fill,
+                          )
+                              .box
+                              .rounded
+                              .clip(Clip.antiAlias)
+                              .margin(const EdgeInsets.symmetric(horizontal: 8))
+                              .make();
+                        }),
+                    10.heightBox,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        homeButton(
+                            context.screenHeight * 0.12,
+                            context.screenWidth / 3.5,
+                            icTopCategories,
+                            topCategory,
+                            () {}),
+                        homeButton(context.screenHeight * 0.12,
+                            context.screenWidth / 3.5, icBrands, brand, () {}),
+                        homeButton(
+                            context.screenHeight * 0.12,
+                            context.screenWidth / 3.5,
+                            icTopSeller,
+                            topSaller,
+                            () {}),
+                      ],
+                    ),
+                    //featured categories
+                    10.heightBox,
 
-
-
+                    Align(
+                        alignment: Alignment.centerLeft,
+                        child: featureCategories.text
+                            .color(darkFontGrey)
+                            .size(18)
+                            .fontFamily(semibold)
+                            .make()),
+                    VxSwiper.builder(
+                        aspectRatio: 16 / 9,
+                        autoPlay: true,
+                        height: 160,
+                        enlargeCenterPage: true,
+                        itemCount: sliderList.length,
+                        itemBuilder: (context, index) {
+                          return Image.asset(
+                            sliderList[index],
+                            fit: BoxFit.fill,
+                          )
+                              .box
+                              .rounded
+                              .clip(Clip.antiAlias)
+                              .margin(const EdgeInsets.symmetric(horizontal: 8))
+                              .make();
+                        }),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
