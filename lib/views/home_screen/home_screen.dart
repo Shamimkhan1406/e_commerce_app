@@ -52,7 +52,24 @@ class HomeScreen extends StatelessWidget {
                 homeButton(context.screenHeight*0.15, context.screenWidth/2.5, icFlashDeal, flashSale, (){}),
               ],
             ),
-            //
+            //seconde swiper
+            10.heightBox,
+            VxSwiper.builder(
+              aspectRatio: 16/9,
+              autoPlay: true,
+              height: 160,
+              enlargeCenterPage: true,
+                itemCount: secondSliderList.length,
+                itemBuilder: (context, index) {
+                  return Image.asset(
+                    secondSliderList[index],
+                    fit: BoxFit.fill,
+                  ).box.rounded.clip(Clip.antiAlias).margin(const EdgeInsets.symmetric(horizontal: 8)).make();
+                }
+            ),
+
+
+
           ],
         ),
       ),
