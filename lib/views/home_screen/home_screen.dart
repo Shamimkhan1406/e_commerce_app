@@ -67,6 +67,15 @@ class HomeScreen extends StatelessWidget {
                   ).box.rounded.clip(Clip.antiAlias).margin(const EdgeInsets.symmetric(horizontal: 8)).make();
                 }
             ),
+            10.heightBox,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                homeButton(context.screenHeight*0.12, context.screenWidth/3.5, icTopCategories, topCategory, (){}),
+                homeButton(context.screenHeight*0.12, context.screenWidth/3.5, icBrands, brand, (){}),
+                homeButton(context.screenHeight*0.12, context.screenWidth/3.5, icTopSeller, topSaller, (){}),
+              ],
+            )
 
 
 
