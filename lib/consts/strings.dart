@@ -28,4 +28,11 @@ const searchanything = "Search anythings...",
     topSaller = "Top Saller",
     topCategory = "Top Category",
     brand = "Brand",
-    featureCategories = "FeatureCategories";
+    featureCategories = "FeatureCategories",
+    womenDrasses = "Women Dresses",
+    girlsWatches = "Girl's Watches",
+    mobilePhone = "Mobile Phone",
+    boysGlasses = "Boy's Glasses",
+    tShirts = "Tshirts",
+    girlsDresses = "Girl's Dresses";
+

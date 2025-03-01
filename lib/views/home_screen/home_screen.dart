@@ -1,5 +1,6 @@
 import 'package:emart_app/consts/consts.dart';
 import 'package:emart_app/consts/list.dart';
+import 'package:emart_app/views/home_screen/components/feature_button.dart';
 import 'package:emart_app/widget_common/home_button.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -112,7 +113,7 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                     //featured categories
-                    10.heightBox,
+                    20.heightBox,
 
                     Align(
                         alignment: Alignment.centerLeft,
@@ -121,23 +122,42 @@ class HomeScreen extends StatelessWidget {
                             .size(18)
                             .fontFamily(semibold)
                             .make()),
-                    VxSwiper.builder(
-                        aspectRatio: 16 / 9,
-                        autoPlay: true,
-                        height: 160,
-                        enlargeCenterPage: true,
-                        itemCount: sliderList.length,
-                        itemBuilder: (context, index) {
-                          return Image.asset(
-                            sliderList[index],
-                            fit: BoxFit.fill,
-                          )
-                              .box
-                              .rounded
-                              .clip(Clip.antiAlias)
-                              .margin(const EdgeInsets.symmetric(horizontal: 8))
-                              .make();
-                        }),
+                    20.heightBox,
+                    //featureCategories
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [Column(
+                            children: [
+                              featureButton(title: featureTitle_1[0], icon: featureImg_1[0]),
+                              10.heightBox,
+                              featureButton(title: featureTitle_2[0], icon: featureImg_2[0]),
+                            ]
+                          ),
+                          Column(
+                            children: [
+                              featureButton(title: featureTitle_1[1], icon: featureImg_1[1]),
+                              10.heightBox,
+                              featureButton(title: featureTitle_2[1], icon: featureImg_2[1]),
+                            ]
+                          ),
+                          Column(
+                            children: [
+                              featureButton(title: featureTitle_1[2], icon: featureImg_1[2]),
+                              10.heightBox,
+                              featureButton(title: featureTitle_2[2], icon: featureImg_2[2]),
+                            ]
+                          ),
+                          
+                          
+                        ],
+                      ),
+                    ),
+
+
+
+
+
                   ],
                 ),
               ),
