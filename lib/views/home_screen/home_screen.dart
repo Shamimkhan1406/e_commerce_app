@@ -127,29 +127,34 @@ class HomeScreen extends StatelessWidget {
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
-                        children: [Column(
-                            children: [
-                              featureButton(title: featureTitle_1[0], icon: featureImg_1[0]),
-                              10.heightBox,
-                              featureButton(title: featureTitle_2[0], icon: featureImg_2[0]),
-                            ]
-                          ),
-                          Column(
-                            children: [
-                              featureButton(title: featureTitle_1[1], icon: featureImg_1[1]),
-                              10.heightBox,
-                              featureButton(title: featureTitle_2[1], icon: featureImg_2[1]),
-                            ]
-                          ),
-                          Column(
-                            children: [
-                              featureButton(title: featureTitle_1[2], icon: featureImg_1[2]),
-                              10.heightBox,
-                              featureButton(title: featureTitle_2[2], icon: featureImg_2[2]),
-                            ]
-                          ),
-                          
-                          
+                        children: [
+                          Column(children: [
+                            featureButton(
+                                title: featureTitle_1[0],
+                                icon: featureImg_1[0]),
+                            10.heightBox,
+                            featureButton(
+                                title: featureTitle_2[0],
+                                icon: featureImg_2[0]),
+                          ]),
+                          Column(children: [
+                            featureButton(
+                                title: featureTitle_1[1],
+                                icon: featureImg_1[1]),
+                            10.heightBox,
+                            featureButton(
+                                title: featureTitle_2[1],
+                                icon: featureImg_2[1]),
+                          ]),
+                          Column(children: [
+                            featureButton(
+                                title: featureTitle_1[2],
+                                icon: featureImg_1[2]),
+                            10.heightBox,
+                            featureButton(
+                                title: featureTitle_2[2],
+                                icon: featureImg_2[2]),
+                          ]),
                         ],
                       ),
                     ),
@@ -165,7 +170,10 @@ class HomeScreen extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          featuredProduct.text.white.fontFamily(bold).size(18).make(),
+                          featuredProduct.text.white
+                              .fontFamily(bold)
+                              .size(18)
+                              .make(),
                           10.heightBox,
                           SingleChildScrollView(
                             scrollDirection: Axis.horizontal,
@@ -174,54 +182,170 @@ class HomeScreen extends StatelessWidget {
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Image.asset(imgP1,width: 150,fit: BoxFit.cover,),
+                                    Image.asset(
+                                      imgP1,
+                                      width: 150,
+                                      fit: BoxFit.cover,
+                                    ),
                                     10.heightBox,
                                     "hp laptop 4gb,500gb".text.make(),
                                     10.heightBox,
-                                    "\$600".text.fontFamily(bold).color(redColor).make(),
+                                    "\$600"
+                                        .text
+                                        .fontFamily(bold)
+                                        .color(redColor)
+                                        .make(),
                                   ],
-                                ).box.white.margin(const EdgeInsets.symmetric(horizontal: 4)).roundedSM.padding(const EdgeInsets.all(8)).make(),
+                                )
+                                    .box
+                                    .white
+                                    .margin(const EdgeInsets.symmetric(
+                                        horizontal: 4))
+                                    .roundedSM
+                                    .padding(const EdgeInsets.all(8))
+                                    .make(),
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Image.asset(imgP1,width: 150,fit: BoxFit.cover,),
+                                    Image.asset(
+                                      imgP1,
+                                      width: 150,
+                                      fit: BoxFit.cover,
+                                    ),
                                     10.heightBox,
                                     "hp laptop 4gb,500gb".text.make(),
                                     10.heightBox,
-                                    "\$600".text.fontFamily(bold).color(redColor).make(),
+                                    "\$600"
+                                        .text
+                                        .fontFamily(bold)
+                                        .color(redColor)
+                                        .make(),
                                   ],
-                                ).box.white.margin(const EdgeInsets.symmetric(horizontal: 4)).roundedSM.padding(const EdgeInsets.all(8)).make(),
+                                )
+                                    .box
+                                    .white
+                                    .margin(const EdgeInsets.symmetric(
+                                        horizontal: 4))
+                                    .roundedSM
+                                    .padding(const EdgeInsets.all(8))
+                                    .make(),
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Image.asset(imgP1,width: 150,fit: BoxFit.cover,),
+                                    Image.asset(
+                                      imgP1,
+                                      width: 150,
+                                      fit: BoxFit.cover,
+                                    ),
                                     10.heightBox,
                                     "hp laptop 4gb,500gb".text.make(),
                                     10.heightBox,
-                                    "\$600".text.fontFamily(bold).color(redColor).make(),
+                                    "\$600"
+                                        .text
+                                        .fontFamily(bold)
+                                        .color(redColor)
+                                        .make(),
                                   ],
-                                ).box.white.margin(const EdgeInsets.symmetric(horizontal: 4)).roundedSM.padding(const EdgeInsets.all(8)).make(),
+                                )
+                                    .box
+                                    .white
+                                    .margin(const EdgeInsets.symmetric(
+                                        horizontal: 4))
+                                    .roundedSM
+                                    .padding(const EdgeInsets.all(8))
+                                    .make(),
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Image.asset(imgP1,width: 150,fit: BoxFit.cover,),
+                                    Image.asset(
+                                      imgP1,
+                                      width: 150,
+                                      fit: BoxFit.cover,
+                                    ),
                                     10.heightBox,
                                     "hp laptop 4gb,500gb".text.make(),
                                     10.heightBox,
-                                    "\$600".text.fontFamily(bold).color(redColor).make(),
+                                    "\$600"
+                                        .text
+                                        .fontFamily(bold)
+                                        .color(redColor)
+                                        .make(),
                                   ],
-                                ).box.white.margin(const EdgeInsets.symmetric(horizontal: 4)).roundedSM.padding(const EdgeInsets.all(8)).make(),
+                                )
+                                    .box
+                                    .white
+                                    .margin(const EdgeInsets.symmetric(
+                                        horizontal: 4))
+                                    .roundedSM
+                                    .padding(const EdgeInsets.all(8))
+                                    .make(),
                               ],
                             ),
                           ),
-
                         ],
                       ),
                     ),
-                    //
+                    //3rd swiper
 
-
-
+                    20.heightBox,
+                    VxSwiper.builder(
+                      aspectRatio: 16 / 9,
+                      autoPlay: true,
+                      height: 160,
+                      enlargeCenterPage: true,
+                      itemCount: secondSliderList.length,
+                      itemBuilder: (context, index) {
+                        return Image.asset(
+                          secondSliderList[index],
+                          fit: BoxFit.fill,
+                        )
+                            .box
+                            .rounded
+                            .clip(Clip.antiAlias)
+                            .margin(const EdgeInsets.symmetric(horizontal: 8))
+                            .make();
+                      },
+                    ),
+                    //all product section
+                    20.heightBox,
+                    GridView.builder(
+                      physics: const NeverScrollableScrollPhysics(),
+                      shrinkWrap: true,
+                      itemCount: 6,
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 2,
+                              mainAxisSpacing: 8,
+                              crossAxisSpacing: 8,
+                              mainAxisExtent: 300),
+                      itemBuilder: (context, index) {
+                        return Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Image.asset(
+                              imgP5,
+                              width: 200,
+                              height: 200,
+                              fit: BoxFit.cover,
+                            ),
+                            const Spacer(),
+                            "hp laptop 4gb,500gb".text.make(),
+                            10.heightBox,
+                            "\$499"
+                                .text
+                                .fontFamily(bold)
+                                .color(redColor)
+                                .make(),
+                          ],
+                        )
+                            .box
+                            .white
+                            .margin(const EdgeInsets.symmetric(horizontal: 4))
+                            .roundedSM
+                            .padding(const EdgeInsets.all(12))
+                            .make();
+                      },
+                    ),
                   ],
                 ),
               ),
