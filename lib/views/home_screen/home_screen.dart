@@ -154,7 +154,71 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
 
+                    20.heightBox,
 
+                    Container(
+                      padding: const EdgeInsets.all(12),
+                      width: double.infinity,
+                      decoration: const BoxDecoration(
+                        color: redColor,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          featuredProduct.text.white.fontFamily(bold).size(18).make(),
+                          10.heightBox,
+                          SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Row(
+                              children: [
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Image.asset(imgP1,width: 150,fit: BoxFit.cover,),
+                                    10.heightBox,
+                                    "hp laptop 4gb,500gb".text.make(),
+                                    10.heightBox,
+                                    "\$600".text.fontFamily(bold).color(redColor).make(),
+                                  ],
+                                ).box.white.margin(const EdgeInsets.symmetric(horizontal: 4)).roundedSM.padding(const EdgeInsets.all(8)).make(),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Image.asset(imgP1,width: 150,fit: BoxFit.cover,),
+                                    10.heightBox,
+                                    "hp laptop 4gb,500gb".text.make(),
+                                    10.heightBox,
+                                    "\$600".text.fontFamily(bold).color(redColor).make(),
+                                  ],
+                                ).box.white.margin(const EdgeInsets.symmetric(horizontal: 4)).roundedSM.padding(const EdgeInsets.all(8)).make(),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Image.asset(imgP1,width: 150,fit: BoxFit.cover,),
+                                    10.heightBox,
+                                    "hp laptop 4gb,500gb".text.make(),
+                                    10.heightBox,
+                                    "\$600".text.fontFamily(bold).color(redColor).make(),
+                                  ],
+                                ).box.white.margin(const EdgeInsets.symmetric(horizontal: 4)).roundedSM.padding(const EdgeInsets.all(8)).make(),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Image.asset(imgP1,width: 150,fit: BoxFit.cover,),
+                                    10.heightBox,
+                                    "hp laptop 4gb,500gb".text.make(),
+                                    10.heightBox,
+                                    "\$600".text.fontFamily(bold).color(redColor).make(),
+                                  ],
+                                ).box.white.margin(const EdgeInsets.symmetric(horizontal: 4)).roundedSM.padding(const EdgeInsets.all(8)).make(),
+                              ],
+                            ),
+                          ),
+
+                        ],
+                      ),
+                    ),
+                    //
 
 
 
