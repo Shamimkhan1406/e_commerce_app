@@ -1,4 +1,5 @@
 import 'package:emart_app/consts/consts.dart';
+import 'package:emart_app/consts/list.dart';
 import 'package:emart_app/views/profile_screen/components/details_card.dart';
 import 'package:emart_app/widget_common/bg_widget.dart';
 
@@ -10,12 +11,12 @@ class ProfileScreen extends StatelessWidget {
     return bgWidget(
       Scaffold(
         body: SafeArea(
-          child: Container(
-            padding: const EdgeInsets.all(8),
-            child: Column(
-              children: [
-                //edit profile button
-                const Align(
+          child: Column(
+            children: [
+              //edit profile button
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: const Align(
                   alignment: Alignment.topRight,
                   child: Icon(
                     Icons.edit,
@@ -24,9 +25,12 @@ class ProfileScreen extends StatelessWidget {
                 ).onTap(() {
                   //
                 }),
+              ),
 
-                //user detail section
-                Row(
+              //user detail section
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8),
+                child: Row(
                   children: [
                     Image.asset(
                       imgProfile2,
@@ -55,26 +59,64 @@ class ProfileScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                20.heightBox,
+              ),
+              20.heightBox,
 
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    detailsCard(context.screenWidth/3.5, "00", "in your cart"),
-                    detailsCard(context.screenWidth/3.5, "39", "in your wishlist"),
-                    detailsCard(context.screenWidth/3.5, "12", "your order"),
-                  ],
-                )
-                // Column(
-                //   mainAxisAlignment: MainAxisAlignment.center,
-                //   children: [
-                //     "00".text.color(darkFontGrey).fontFamily(bold).size(16).make(),
-                //     5.heightBox,
-                //     "in your cart".text.color(darkFontGrey).make(),
-                //   ],
-                // ).box.white.rounded.width(context.screenWidth / 4).height(60).padding(const EdgeInsets.all(4)).make(),
-              ],
-            ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  detailsCard(
+                    context.screenWidth / 3.5,
+                    "00",
+                    "in your cart",
+                  ),
+                  detailsCard(
+                    context.screenWidth / 3.5,
+                    "39",
+                    "in your wishlist",
+                  ),
+                  detailsCard(
+                    context.screenWidth / 3.5,
+                    "12",
+                    "your order",
+                  ),
+                ],
+              ),
+              //20.heightBox,
+              //button section
+              ListView.separated(
+                shrinkWrap: true,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    leading: Image.asset(
+                      profileButtonIcons[index],
+                      width: 22,
+                    ),
+                    title: profileButtonList[index]
+                        .text
+                        .fontFamily(semibold)
+                        .color(darkFontGrey)
+                        .make(),
+                  );
+                },
+                separatorBuilder: (context, index) {
+                  return const Divider(
+                    color: lightGrey,
+                  );
+                },
+                itemCount: profileButtonList.length,
+              )
+                  .box
+                  .white
+                  .rounded
+                  .margin(const EdgeInsets.all(12))
+                  .padding(const EdgeInsets.symmetric(horizontal: 16))
+                  .shadowSm
+                  .make()
+                  .box
+                  .color(redColor)
+                  .make(),
+            ],
           ),
         ),
       ),
